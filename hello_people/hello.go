@@ -8,8 +8,6 @@ import (
 var (
 	name     string
 	language string
-	greeting string
-	err      error
 )
 
 func main() {
@@ -18,7 +16,7 @@ func main() {
 	fmt.Print("What language do you speak? ")
 	fmt.Scanf("%s", &language)
 
-	greeting, err = greetings.Greet(name, language)
+	greeting, err := greetings.Greet(name, language)
 	if err == nil {
 		fmt.Println(greeting)
 	} else {
