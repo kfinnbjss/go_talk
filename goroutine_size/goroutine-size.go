@@ -11,7 +11,7 @@ func memConsumed() uint64 {
 	runtime.GC()
 	var s runtime.MemStats
 	runtime.ReadMemStats(&s)
-	return s.Sys
+	return s.Alloc
 }
 
 func ByteCountSI(b uint64) string {
